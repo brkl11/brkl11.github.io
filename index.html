@@ -29,6 +29,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: MyResume
@@ -38,9 +39,15 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 <body class="index-page">
-
+      <!-- Krovimas -->
+  <div id="preloader">
+    <div class="loader-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
   <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -207,7 +214,7 @@
             <div class="resume-item pb-0">
               <h4>Lukas Barkauskas</h4>
               <p><em>Esu dirbtinio intelekto sistemų studentas, besidomintis technologijomis, programavimu ir duomenų analize. Turiu patirties klientų aptarnavimo bei socialinių tinklų administravimo srityse – kuriu turinį, redaguoju nuotraukas ir rašau tekstus, derindamas techninius bei kūrybinius įgūdžius.</em></p>
-              <ul>
+              <ul class="resume-ulist">
                 <li>Vilnius, Lietuva</li>
                 <li>(123) 456-7891</li>
                 <li>Email@example.com</li>
@@ -227,6 +234,38 @@
               <p><em>Ukmergės Antano Smetonos Gimnazija, LT</em></p>
             </div><!-- Edn Resume Item -->
 
+            <div class="resume-item">
+              <h4>Kompetencijos</h4>
+            <ul class="resume-ulist">
+              <li>Atsakingas ir orientuotas į kokybę</li>
+              <li>Gebėjimas efektyviai dirbti komandoje ir savarankiškai</li>
+              <li>Kruopštumas ir dėmesys detalėms</li>
+              </ul>
+
+              <!-- Numeruotas + nested sąrašas -->
+            <ol class="resume-ol custom-ol">
+              <li>Programavimo kalbos
+                <ol>
+                  <li>Python</li>
+                  <li>Matlab</li>
+                  <li>C/C++</li>
+                </ol>
+              </li>
+              <li>Dirbtinis intelektas ir duomenų analizė</li>
+              <ol>
+                  <li>Mašininis mokymasis</li>
+                  <li>Neuroninių tinklų taikymai</li>
+                  <li>Duomenų apdorojimas ir vizualizavimas</li>
+                </ol>
+              <li>Skaitinis modeliavimas ir sistemų analizė</li>
+              <ol>
+                  <li>Matematinis modeliavimas</li>
+                  <li>Skaitiniai metodai ir sistemų analizė</li>
+                  <li>Optimizavimo metodai</li>
+                </ol>
+            </ol>
+            </div><!-- Edn Resume Item -->
+
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -235,7 +274,7 @@
               <h4>Customer Support Representetive</h4>
               <h5>2025 - Dabar</h5>
               <p><em>UAB Shift4 Lithuania, Vilnius </em></p>
-              <ul>
+              <ul class="resume-ulist">
                 <li>Klientų aptarnavimas ir bendravimo įgūdžiai – gebėjimas aiškiai, mandagiai ir profesionaliai bendrauti su klientais, sprendžiant įvairius klausimus ar problemas.</li>
                 <li>Problemų sprendimas – gebėjimas greitai įvertinti situaciją, analizuoti informaciją ir rasti efektyviausią sprendimą klientui bei įmonei. </li>
                 <li>Darbas komandoje ir atsakomybė – gebėjimas bendradarbiauti su kolegomis, dalintis informacija ir siekti bendrų tikslų laikantis įmonės vertybių.</li>
@@ -246,7 +285,7 @@
             <div class="resume-item">
               <h4>Soc. tinklų komandos paskyros administratorius</h4>
               <h5>2023 - Dabar</h5>
-              <ul>
+              <ul class="resume-ulist">
                 <li>Krepšinio komandos paskyros administravimas – atsakingai valdau komandos socialinių tinklų paskyras, užtikrindamas (-a) nuoseklų ir patrauklų turinį.</li>
                 <li>Turinio kūrimas ir planavimas – kuriu įrašus, rengiu komunikacijos planus bei užtikrinu, kad turinys atitiktų komandos įvaizdį ir sezono aktualijas.</li>
                 <li>Nuotraukų redagavimas „Adobe Photoshop“ – apdoroju ir tobulinu vizualinį turinį, pritaikydamas jį socialinių tinklų formatams ir estetikai.</li>
@@ -382,8 +421,37 @@
     </section><!-- /Portfolio Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="services" class="services section animate-section">
+    <div class="services-table-wrapper">
+      <h3 class="services-table-title">Teikiamos paslaugos</h3>
 
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Paslauga</th>
+            <th>Aprašymas</th>
+            <th>Kaina, €</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mašininio mokymosi modelių kūrimas</td>
+            <td>Prognozavimo, klasifikavimo ar optimizavimo modelių kūrimas ir testavimas naudojant modernius AI algoritmus.</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>Duomenų analizė ir vizualizavimas</td>
+            <td>Duomenų rinkimas, apdorojimas, analizė bei aiškių vizualizacijų kūrimas naudojant Python ir MATLAB.</td>
+            <td>120</td>
+          </tr>
+          <tr>
+            <td>Algoritmų kūrimas ir sprendimų automatizavimas</td>
+            <td>Individualių algoritmų ir automatizuotų sprendimų kūrimas naudojant Python ar MATLAB — nuo duomenų apdorojimo iki procesų optimizavimo.</td>
+            <td>110</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>      
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>

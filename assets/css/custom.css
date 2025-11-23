@@ -1,0 +1,423 @@
+body {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #fc6565;
+}
+h1 {
+    font-family: 'Garamond', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+h2 {
+    font-family: 'Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #e91e63;
+}
+h3 {
+    font-family: 'Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ff9800;
+}
+h3 {
+    font-family: 'Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f00f3c;
+}
+
+h4 {
+    font-family: 'Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #9c27b0;
+}
+h5 {
+    font-family: 'Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #8d0054;
+}
+h6 {
+    font-family: 'Garamond', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #eb8ef1;
+}
+p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #9c1954;
+}
+
+
+.about .content {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5ddf7;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(216, 44, 210, 0.719);
+}
+
+.about .content ul li {
+    margin-bottom: 15px;
+}
+
+.resume .resume-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5ddf7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(216, 44, 210, 0.719);
+}
+
+.resume .resume-item ul li {
+    margin-bottom: 10px;
+}
+
+.portfolio .portfolio-item {
+    padding: 15px;
+    background-color: #f5ddf7;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(216, 44, 210, 0.719);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 3f. Animacija hover efektui */
+}
+
+.portfolio .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about, .resume, .portfolio {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.navmenu {
+    background-color: hsl(332, 65%, 64%);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(65, 9, 9, 0.887);
+}
+
+.navmenu a,
+.navmenu a:focus {
+    color: hsl(332, 83%, 49%);            /* Šviesūs tekstai */
+    background: transparent;   /* Pašaliname šablono foną */
+    border-radius: 8px;        /* Šiek tiek užapvalinti mygtukai */
+    transition: all 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu li:hover>a,
+.navmenu .active,
+.navmenu .active:focus {
+    color: #d881a5;
+    background-color:hsl(332, 61%, 52%);
+    transform: scale(1.05);
+}
+
+.skills .progress-bar-wrap {
+    background: #f2c2e7;
+    border-radius: 20px;
+    height: 14px;
+    margin-bottom: 15px;
+}
+
+.skills .progress-bar {
+    background: linear-gradient(90deg, #512968, rgb(163, 49, 181)); /* Gradientas barui */
+    border-radius: 20px;
+    height: 14px;
+    transition: width 1s ease-in-out;
+}
+
+.skills .progress-bar:hover {
+    filter: brightness(1.2);
+}
+
+
+button, .btn {
+
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #9e3c7e;
+    transform: scale(1.05);
+}
+
+button:active, .btn:active {
+    background-color: #581f4f;
+    transform: scale(0.98); 
+}
+
+a {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
+    color: #f741a8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+a:hover {
+    color: #ff07c1;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+
+
+a:active {
+    color: #500723;
+    transform: scale(0.98);
+}
+
+
+/* Resume sąrašų stilius */
+.resume-ulist {
+    list-style: none;        /* Pašaliname standartinius taškus */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.resume-ulist li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+.resume-ulist li::before {
+    content: "*";
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #750b55;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+/* ===============  NUMERUOTAS SĄRAŠAS (OL)  =============== */
+
+/* Resume sąrašų stilius */
+.resume-ulist {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.resume-ulist li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.resume-ulist li::before {
+    content: "*";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #750b55;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Numeruotas sąrašas su counter */
+.resume-ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-ol li {
+    counter-increment: item;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+}
+
+.resume-ol li::before {
+    content: counter(item) ". ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #8b196b;
+}
+
+/* Vidinis OL (nested list) */
+.custom-ol ol {
+    counter-reset: subitem;
+    margin-left: 30px;
+    margin-top: 8px;
+    list-style: none;
+}
+
+.custom-ol ol li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 6px;
+    font-size: 15px;
+    counter-increment: subitem;
+}
+
+.custom-ol ol li::before {
+    content: counter(subitem, lower-alpha) ") ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    color: #7b1fa2;
+}
+
+/* ==== Paslaugų lentelė (Services) ==== */
+
+.services-table-wrapper {
+    margin-top: 30px;
+}
+
+.services-table-title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700; 
+}
+
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.services-table th,
+.services-table td {
+    padding: 12px 16px;     
+    text-align: center;      
+}
+
+
+.services-table thead tr {
+    background: linear-gradient(90deg, #512968, #a331b5);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Zebra stilius hover efektas */
+
+.services-table tbody tr:nth-child(odd) {
+    background-color: #fbe6ff;   
+}
+
+.services-table tbody tr:nth-child(even) {
+    background-color: #f2d0fb;   
+}
+
+.services-table tbody tr:hover {
+    background-color: #ffeefe;   
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* ===== sekcijų atsiradimas ===== */
+
+@keyframes fadeInUpSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section {
+  opacity: 0;
+  animation: fadeInUpSection 0.9s ease-out forwards;
+}
+
+/* Šiek tiek skirtingi uždelsimai, kad sektųsi vienas po kito */
+#about.animate-section    { animation-delay: 0.1s; }
+#resume.animate-section   { animation-delay: 0.2s; }
+#services.animate-section { animation-delay: 0.3s; }
+
+    /* ===== Page pre-loader ===== */
+
+    #preloader {
+    position: fixed;
+    inset: 0;                        /* top:0; right:0; bottom:0; left:0; */
+    background: #fccde5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: preloaderFade 2.2s ease-out forwards;
+    }
+
+/* Taškų „pulsavimo“ animacija */
+.loader-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.loader-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff6ec7;
+  animation: pulseDots 0.8s ease-in-out infinite;
+}
+
+.loader-dots span:nth-child(2) { animation-delay: 0.15s; }
+.loader-dots span:nth-child(3) { animation-delay: 0.30s; }
+
+@keyframes pulseDots {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+  }
+}
+
+/* Pats preloaderis po ~2 s pranyksta */
+@keyframes preloaderFade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
