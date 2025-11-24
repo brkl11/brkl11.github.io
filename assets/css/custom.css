@@ -106,9 +106,9 @@ p {
 
 .navmenu a,
 .navmenu a:focus {
-    color: hsl(332, 83%, 49%);            /* Šviesūs tekstai */
-    background: transparent;   /* Pašaliname šablono foną */
-    border-radius: 8px;        /* Šiek tiek užapvalinti mygtukai */
+    color: hsl(332, 83%, 49%);
+    background: transparent;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
@@ -185,10 +185,9 @@ a:active {
     transform: scale(0.98);
 }
 
-
 /* Resume sąrašų stilius */
 .resume-ulist {
-    list-style: none;        /* Pašaliname standartinius taškus */
+    list-style: none;
     padding-left: 0;
     margin-top: 10px;
 }
@@ -213,7 +212,6 @@ a:active {
     line-height: 16px;
 }
 
-/* ===============  NUMERUOTAS SĄRAŠAS (OL)  =============== */
 
 /* Resume sąrašų stilius */
 .resume-ulist {
@@ -264,7 +262,6 @@ a:active {
     font-size: 18px;
     color: #8b196b;
 }
-
 /* Vidinis OL (nested list) */
 .custom-ol ol {
     counter-reset: subitem;
@@ -289,9 +286,7 @@ a:active {
     font-weight: 600;
     color: #7b1fa2;
 }
-
 /* ==== Paslaugų lentelė (Services) ==== */
-
 .services-table-wrapper {
     margin-top: 30px;
 }
@@ -327,7 +322,6 @@ a:active {
 }
 
 /* Zebra stilius hover efektas */
-
 .services-table tbody tr:nth-child(odd) {
     background-color: #fbe6ff;   
 }
@@ -343,7 +337,6 @@ a:active {
 }
 
 /* ===== sekcijų atsiradimas ===== */
-
 @keyframes fadeInUpSection {
   from {
     opacity: 0;
@@ -357,53 +350,30 @@ a:active {
 
 .animate-section {
   opacity: 0;
-  animation: fadeInUpSection 0.9s ease-out forwards;
+  animation: fadeInUpSection 5s ease-out forwards;
 }
 
-/* Šiek tiek skirtingi uždelsimai, kad sektųsi vienas po kito */
-#about.animate-section    { animation-delay: 0.1s; }
-#resume.animate-section   { animation-delay: 0.2s; }
-#services.animate-section { animation-delay: 0.3s; }
+#about.animate-section    { animation-delay: 5s; }
+#resume.animate-section   { animation-delay: 2s; }
+#services.animate-section { animation-delay: 5s; }
 
-    /* ===== Page pre-loader ===== */
-
-    #preloader {
+/* Page pre-loader */
+   #preloader {
     position: fixed;
-    inset: 0;                        /* top:0; right:0; bottom:0; left:0; */
-    background: #fccde5;
+    inset: 0;
+    background: linear-gradient(270deg, #e2237c, #fccde5, #ffb6c1);
+    background-size: 600% 600%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    animation: preloaderFade 2.2s ease-out forwards;
+    animation: gradientMove 3s ease infinite, preloaderFade 2.2s ease-out forwards;
     }
 
-/* Taškų „pulsavimo“ animacija */
-.loader-dots {
-  display: flex;
-  gap: 10px;
-}
-
-.loader-dots span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ff6ec7;
-  animation: pulseDots 0.8s ease-in-out infinite;
-}
-
-.loader-dots span:nth-child(2) { animation-delay: 0.15s; }
-.loader-dots span:nth-child(3) { animation-delay: 0.30s; }
-
-@keyframes pulseDots {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: scale(1.8);
-    opacity: 1;
-  }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Pats preloaderis po ~2 s pranyksta */
@@ -421,3 +391,87 @@ a:active {
     visibility: hidden;
   }
 }
+
+/* Apie sekcijos animuotos figūros */
+#about {
+position: relative;
+overflow: hidden;
+}
+
+/* Bendras stilius figūroms */
+.shape {
+position: absolute;
+opacity: 0.6;
+z-index: 0;
+pointer-events: none;
+}
+
+/* Apskritimai */
+.shape.circle {
+width: 60px;
+height: 60px;
+background: radial-gradient(circle at 30% 30%, #600456, #7ebbc6);
+border-radius: 50%;
+animation: float 6s ease-in-out infinite, rotate 8s linear infinite;
+}
+
+/* Kvadratai */
+.shape.square {
+width: 50px;
+height: 50px;
+background-color: #eb1059;
+animation: float 7s ease-in-out infinite, scale 5s ease-in-out infinite;
+}
+
+/* Trikampiai */
+.shape.triangle {
+width: 0;
+height: 0;
+border-left: 30px solid transparent;
+border-right: 30px solid transparent;
+border-bottom: 60px solid #e4a317;
+animation: float 8s ease-in-out infinite, rotate 10s linear infinite;
+}
+
+/* Animacijos */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+@keyframes scale {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.5); }
+}
+
+@keyframes float {
+0% { transform: translateY(0) translateX(0); }
+25% { transform: translateY(-20px) translateX(15px); }
+50% { transform: translateY(20px) translateX(-10px); }
+75% { transform: translateY(-50px) translateX(10px); }
+100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(150%); }
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+
+

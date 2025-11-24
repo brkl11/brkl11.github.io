@@ -338,15 +338,15 @@ h6 {
   padding-top: 5px;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Preloader
---------------------------------------------------------------*/
+--------------------------------------------------------------*/ */
 #preloader {
   position: fixed;
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: var(--background-color);
+  background: rgb(red, green, blue);
   transition: all 0.6s ease-out;
 }
 
@@ -356,7 +356,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-color: #ff69b4 transparent #ff69b4 transparent; /* rožinė */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1454,6 +1454,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
