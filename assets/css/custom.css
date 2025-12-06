@@ -474,4 +474,221 @@ animation: float 8s ease-in-out infinite, rotate 10s linear infinite;
   animation: shimmer 3s infinite;
 }
 
+/* KONTAKTO FORMOS*/
+
+#contactForm {
+  background: linear-gradient(135deg, #ffe6f2 0%, #ffd6eb 100%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 120, 180, 0.15);
+  transition: 0.3s ease;
+}
+
+#contactForm:hover {
+  box-shadow: 0 12px 26px rgba(255, 120, 180, 0.25);
+}
+
+/* Tekstas ir label */
+#contactForm label {
+  font-weight: 600;
+  color: #cc2b6f;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* Input laukeliai */
+#contactForm .form-control {
+  border: 2px solid #ffcce0;
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+#contactForm .form-control:focus {
+  border-color: #ff8fc4;
+  box-shadow: 0 0 8px rgba(255, 120, 180, 0.25);
+}
+
+/* Slider */
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 4px;
+  background: #ffc8df;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ff5fa7;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ff3d93;
+}
+
+/* Slider value */
+.slider-value {
+  font-weight: 700;
+  color: #cc2b6f;
+}
+
+/* Klaidos žinutės */
+#contactForm small {
+  font-size: 13px;
+  color: #d42863;
+}
+
+/* Sėkmės žinutė */
+#form-success {
+  background-color: #ffb8d6;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #7a0034;
+  margin-bottom: 15px;
+}
+
+/* Submit mygtukas */
+#contactForm button[type="submit"] {
+  background-color: #ff5fa7;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 14px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 120, 180, 0.3);
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #ff3d93;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 120, 180, 0.35);
+}
+
+#contactForm button[type="submit"]:active {
+  transform: scale(0.97);
+}
+.disabled-btn {
+  opacity: 0.5;
+  pointer-events: none;  
+}
+
+#game-section {
+    margin-top: 60px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 15px;
+}
+
+#game-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls, .stats {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background: #f230c5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    background: #f192e4;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background: #66cc66;
+    cursor: default;
+}
+
+#win-message {
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    font-size: 24px;
+}
+
+/* Bendras mygtukų stilius */
+#game-section button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    color: white;
+}
+
+/* START mygtukas*/
+#startBtn {
+    background: #e71f8a;
+    box-shadow: 0 4px 10px rgba(119, 3, 28, 0.3);
+}
+
+#startBtn:hover {
+    background: #800542;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(99, 7, 117, 0.5);
+}
+
+/* ATNAUJINTI mygtukas*/
+#resetBtn {
+    background: #e702f8;
+    box-shadow: 0 4px 10px rgba(203, 25, 40, 0.3);
+}
+
+#resetBtn:hover {
+    background: #f319f7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(197, 27, 213, 0.5);
+}
+
+/* Efektas paspaudimo metu */
+#game-section button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
 
